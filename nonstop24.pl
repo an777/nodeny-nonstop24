@@ -211,7 +211,7 @@ if ($ACT eq '4') {
     &error(-101, 'Pay ID not found') if (!$PAY_ID);
     &error(-101, 'Trade point not found') if (!$TRADE_POINT);
     &error(-101, 'Receipt num not fount') if (!$RECEIPT_NUM);
-    &error(-101, 'Wrong money format') unless ($PAY_AMOUNT=~/^\d+(\.\d{2}){0,1}$/);
+    &error(-101, 'Wrong money format') unless ($PAY_AMOUNT=~/^\d+(\.\d{1,2}){0,1}$/);
     
     %user=&get_account();
 
